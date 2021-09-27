@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        tempC;
+        constructor(c,f) {
+            this.tempC = c
+        }
+        cTof(){
+            return (this.tempC*1.8)+32
+        }
+        cTok(){
+            return this.tempC + 274.15
+        }
+    }
+    let temperatureConvert = new Temperature(25);
+    alert(temperatureConvert.cTof())
+    alert(temperatureConvert.cTok())
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class hinhCn {
+        chieuDai;
+        chieuRong;
+        constructor(chieuDai, chieurong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieurong;
+        }
+        S() {
+            return this.chieuDai * this.chieuRong
+        }
+        chuVi() {
+            return (this.chieuDai * this.chieuRong) * 2;
+        }
+    }
+    let Cn = new hinhCn(4, 5);
+    alert(Cn.S())
+    alert(Cn.chuVi())
+</script>
+</body>
+</html>
