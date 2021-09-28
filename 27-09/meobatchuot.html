@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mouse {
+        name;
+        weight;
+        speed;
+        status;
+
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+
+        describe() {
+            if (this.status === 'alive') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        sound() {
+            return 'chít, chít'
+        }
+    }
+
+    class cat {
+        name;
+        weight;
+        speed;
+
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+
+        sound() {
+            return 'Meo meo'
+        }
+
+        ability() {
+            if (this.speed > mouse.speed) {
+                return true
+            }
+        }
+
+        eat() {
+            if (mouse.describe) {
+                this.weight += 1
+            }
+        }
+    }
+
+    let mou = new mouse('Rat', 1, 10, 'alive');
+    let tom = new cat('Tom', 2, 20);
+    console.log(mou.sound());
+    console.log(tom.sound());
+    if (tom.ability()) {
+        console.log('Tom catch Rat');
+    }
+    tom.eat();
+    console.log('Tom ate Rat')
+</script>
+</body>
+</html>
